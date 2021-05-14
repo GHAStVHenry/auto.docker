@@ -8,6 +8,6 @@ RUN apt-get update -y --fix-missing && \
   apt-get update -y --fix-missing && \
   apt-get upgrade && \
   apt-get -f install -y libgdal-dev libproj-dev libgeos-dev libudunits2-dev libnode-dev libcairo2-dev libnetcdf-dev && \
-  apt-get -f install -y r-base=4.0.4-1.2004.0 r-base-core r-recommended
+  apt-get -f install -y r-base=4.0.5-1.2004.0 r-base-core r-recommended
 
 RUN R -e "install.packages(c(\"BiocManager\",\"optparse\",\"reticulate\"))"
