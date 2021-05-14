@@ -8,9 +8,15 @@ images:
   python3:
     1.0.0:
       children:
-      - null
+      - r4:1.0.0
       parents:
       - base:1.0.0
+  r4:
+    1.0.0:
+      children:
+      - null
+      parents:
+      - python3:1.0.0
   ubuntu:
     '20.10':
       children:
@@ -19,4 +25,5 @@ images:
 latest:
   base: 1.0.0
   python3: 1.0.0
+  r4: 1.0.0
 terminated: {}
