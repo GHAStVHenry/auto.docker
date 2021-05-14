@@ -8,6 +8,9 @@ RUN apt-get update -y --fix-missing && \
   apt-get update -y --fix-missing && \
   apt-get upgrade && \
   apt-get -f install -y libgdal-dev libproj-dev libgeos-dev libudunits2-dev libnode-dev libcairo2-dev libnetcdf-dev && \
+  apt-get install -y tzdata && \
+  wget http://archive.ubuntu.com/ubuntu/pool/main/i/icu/libicu66_66.1-2ubuntu2_amd64.deb && \
+  dpkg -i libicu66_66.1-2ubuntu2_amd64.deb && \
   apt-get -f install -y r-base=4.0.5-1.2004.0 r-base-core r-recommended
 
 RUN R -e "install.packages(c(\"BiocManager\",\"optparse\",\"reticulate\"))"
