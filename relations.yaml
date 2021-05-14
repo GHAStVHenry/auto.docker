@@ -1,3 +1,15 @@
-images: {}
-latest: {}
+images:
+  base:
+    1.0.0:
+      children:
+      - null
+      parents:
+      - ubuntu:20.10
+  ubuntu:
+    '20.10':
+      children:
+      - base:1.0.0
+      parents: []
+latest:
+  base: 1.0.0
 terminated: {}
