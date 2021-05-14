@@ -1,0 +1,5 @@
+commands:
+  - cmd: "R -e \"packageVersion(\"Seurat\")\""
+    expect_text: "4.0.1"
+  - cmd: "R -e \"packageVersion(\"sceasy\")\""
+    expect_text: "0.0.6"
