@@ -1,0 +1,5 @@
+commands:
+  - cmd: "Rscript -e \"packageVersion('Seurat')\" | grep -o '[0-9].[0-9].[0-9]'"
+    expect_text: "4.0.1"
+  - cmd: "Rscript -e \"packageVersion('sceasy')\" | grep -o '[0-9].[0-9].[0-9]'"
+    expect_text: "0.0.6"
