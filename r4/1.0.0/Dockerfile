@@ -1,19 +1,14 @@
-FROM ghhenry/base:1.0.0
+FROM ghhenry/python3:1.0.0
 LABEL author="Gervaise H. Henry"
 
-RUN apt-get install -y python3 python3-pip
+RUN apt-get update -y --fix-missing && \
+  apt-get install apt-transport-https software-properties-common gnupg gnupg2 gnupg1 -y && \
+  add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/' && \
+  apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9 && \
+  apt-get update -y --fix-missing && \
+  apt-get install -y tzdata && \
+  wget http://archive.ubuntu.com/ubuntu/pool/main/i/icu/libicu66_66.1-2ubuntu2_amd64.deb && \
+  dpkg -i libicu66_66.1-2ubuntu2_amd64.deb && \
+  apt-get -f install -y r-base=4.0.4-1.2004.0 r-base-core r-recommended
 
-RUN wget http://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
-  bash Miniconda3-latest-Linux-x86_64.sh -p /miniconda -b && \
-  rm Miniconda3-latest-Linux-x86_64.sh
-ENV PATH=/miniconda/bin:${PATH}
-
-RUN conda config --add channels defaults && \
-  conda config --add channels bioconda && \
-  conda config --add channels conda-forge && \
-  conda update -n base -c defaults -y conda
-
-RUN pip3 install --upgrade pip
-
-RUN pip3 install argparse==1.4.0 
-RUN conda install pandas=1.2.3
+RUN R -e "install.packages(c(\"BiocManager\",\"optparse\",\"reticulate\"))"
