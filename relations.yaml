@@ -14,9 +14,15 @@ images:
   r4:
     1.0.0:
       children:
-      - null
+      - seurat4:1.0.0
       parents:
       - python3:1.0.0
+  seurat4:
+    1.0.0:
+      children:
+      - null
+      parents:
+      - r4:1.0.0
   ubuntu:
     '20.10':
       children:
@@ -26,4 +32,5 @@ latest:
   base: 1.0.0
   python3: 1.0.0
   r4: 1.0.0
+  seurat4: 1.0.0
 terminated: {}
