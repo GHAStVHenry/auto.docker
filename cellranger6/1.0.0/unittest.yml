@@ -1,0 +1,3 @@
+commands:
+  - cmd: "cellranger --version"
+    expect_text: "cellranger cellranger-6.0.1"

@@ -2,9 +2,16 @@ images:
   base:
     1.0.0:
       children:
+      - cellranger6:1.0.0
       - python3:1.0.0
       parents:
       - ubuntu:20.10
+  cellranger6:
+    1.0.0:
+      children:
+      - null
+      parents:
+      - base:1.0.0
   python3:
     1.0.0:
       children:
@@ -30,6 +37,7 @@ images:
       parents: []
 latest:
   base: 1.0.0
+  cellranger6: 1.0.0
   python3: 1.0.0
   r4: 1.0.0
   seurat4: 1.0.0
