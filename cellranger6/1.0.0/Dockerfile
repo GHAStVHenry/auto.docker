@@ -2,7 +2,7 @@ FROM ghhenry/base:1.0.0
 LABEL author="Gervaise H. Henry"
 
 RUN apt-get install -y alien unzip && \
-  wget https://support.illumina.com/content/dam/illumina-support/documents/downloads/software/bcl2fastq/bcl2fastq2-v2-20-0-linux-x86-64.zip && \
+  wget ftp://webdata2:webdata2@ussd-ftp.illumina.com/downloads/software/bcl2fastq2-v2-20-0-linux-x86-64.zip && \
   unzip bcl2fastq*.zip && \
   alien -i bcl2fastq*.rpm && \
   rm bcl2fastq*.rpm
