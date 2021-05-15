@@ -1,3 +1,5 @@
 commands:
+  - cmd: "bcl2fastq --version"
+    expect_text: "2.20.0"
   - cmd: "cellranger --version"
     expect_text: "cellranger cellranger-6.0.1"
