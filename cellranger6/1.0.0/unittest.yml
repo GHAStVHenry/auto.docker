@@ -1,3 +1,5 @@
 commands:
+  - cmd: "bcl2fastq --version 2>&1 | grep -o bcl2fastq.*"
+    expect_text: "bcl2fastq v2.20.0.422"
   - cmd: "cellranger --version"
     expect_text: "cellranger cellranger-6.0.1"
