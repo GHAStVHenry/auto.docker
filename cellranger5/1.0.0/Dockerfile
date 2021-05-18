@@ -9,5 +9,5 @@ RUN apt-get install -y unzip alien && \
 
 RUN cd /opt && \
   wget -O cellranger-5.0.1.tar.gz "https://cf.10xgenomics.com/releases/cell-exp/cellranger-5.0.1.tar.gz?Expires=1621351102&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9jZi4xMHhnZW5vbWljcy5jb20vcmVsZWFzZXMvY2VsbC1leHAvY2VsbHJhbmdlci01LjAuMS50YXIuZ3oiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2MjEzNTExMDJ9fX1dfQ__&Signature=Xnx5ppE69anV5HBNDO7jlYHpXY8ViLSLT2mr~L4AgCN52xM8aIqtDRq1xR80lrfeHr7q0pcWBCaacwHNSvhkm8bCLU4Os03skJokHT8LNH~pB3a62GRfhBvyWeq2-zcPOCtBw2GchieJLylY91g0jkjAOvMplsIm7Vk0jdXuNXPBy1--8qAEvCGOYqOf84nU5n7S23RLnoP9wBa~ys-4KdjaJll5LrIB7KFbfmKz-uRIuP6JBsl9lBOPeJxeEZIh5ziovx2NFWZKf8MPnsKje3N008ZaUHrgdO57Jyfduk-VvY0ByepBwMCJUQBCKIE~WaVMX7Yur19ZL2~XN6btfQ__&Key-Pair-Id=APKAI7S6A5RYOXBWRPDA" && \
-  tar -xzvf cellranger-6.0.1.tar.gz
-ENV PATH=/opt/cellranger-6.0.1:$PATH
+  tar -xzvf cellranger-5.0.1.tar.gz
+ENV PATH=/opt/cellranger-5.0.1:$PATH
