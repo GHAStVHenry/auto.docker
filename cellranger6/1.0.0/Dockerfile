@@ -4,7 +4,7 @@ LABEL author="Gervaise H. Henry"
 RUN apt-get install -y unzip alien && \
   wget 'https://files.softwaredownloads.illumina.com/e8ed3335-5201-48ff-a2bc-db4bfb792c85/bcl2fastq2-v2-20-0-linux-x86-64.zip?Expires=1621305945&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9maWxlcy5zb2Z0d2FyZWRvd25sb2Fkcy5pbGx1bWluYS5jb20vZThlZDMzMzUtNTIwMS00OGZmLWEyYmMtZGI0YmZiNzkyYzg1L2JjbDJmYXN0cTItdjItMjAtMC1saW51eC14ODYtNjQuemlwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjIxMzA1OTQ1fX19XX0_&Signature=rfB78lCbWF0HeOqiJ5L7aQZPKn3kMYFtZi1-K1c5r79VSIxZDpQjMzCKYLjQKhVBe4V~Wk42EXI2A-2lWz5c2pIEF4F6pei~iH7QrMMCGgwtKCasCK7HrGMeT3D~1bdOIvzF8efMgzt6hn2WihL5aeIqKHjPL9ck~PvRKSmxH7HjqOsl5R-rOH~23NLnk1x8tihZQTfHMemD7DcA51sQ-kCB5tAsSIgpEOSnvXt9J1VGK-E5OUVHiFXl6HasIh~U~9dE0pM~UpfHWVuE5nX7SXx0rXU6DAuoMwFCYFTD4iYtWtfWPXZaGE1op1boI8nFg2Mh9Z3vUGM5-XcdvE9hqg__&Key-Pair-Id=APKAJO3UYWPXK4A26FPQ' -O bcl2fastq2-v2-20-0-linux-x86-64.zip && \
   unzip bcl2fastq2-v2-20-0-linux-x86-64.zip && \
-  alien -i bcl2fastq2-v2-20-0-linux-x86-64.rpm && \
+  alien -i bcl2fastq2-v2.20.0.422-Linux-x86_64.rpm && \
   rm  bcl2fastq2*
 
 RUN cd /opt && \
