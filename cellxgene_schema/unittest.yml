@@ -1,0 +1,3 @@
+commands:
+  - cmd: "cellxgene-schema --version"
+    expect_text: "0.0.2"
