@@ -1,3 +1,3 @@
 commands:
-  - cmd: "python --version"
-    expect_text: "Python 3.*"
+  - cmd: "cellxgene-schema -h | grep Usage"
+    expect_text: "Usage: cellxgene-schema [OPTIONS] COMMAND <args>"
