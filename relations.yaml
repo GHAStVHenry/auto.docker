@@ -18,10 +18,17 @@ images:
       - null
       parents:
       - python3:1.0.0
+  cellxgene_schema0.0.2gh:
+    1.0.0:
+      children:
+      - null
+      parents:
+      - python3:1.0.0
   python3:
     1.0.0:
       children:
       - cellxgene_schema0.0.2:1.0.0
+      - cellxgene_schema0.0.2gh:1.0.0
       - r4:1.0.0
       parents:
       - base:1.0.0
@@ -46,6 +53,7 @@ latest:
   base: 1.0.0
   cellranger6: 1.0.0
   cellxgene_schema0.0.2: 1.0.0
+  cellxgene_schema0.0.2gh: 1.0.0
   python3: 1.0.0
   r4: 1.0.0
   seurat4: 1.0.0
