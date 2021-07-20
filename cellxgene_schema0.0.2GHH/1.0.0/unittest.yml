@@ -1,0 +1,3 @@
+commands:
+  - cmd: "cellxgene-schema -h | grep -o 'Usage*'"
+    expect_text: "Usage"
