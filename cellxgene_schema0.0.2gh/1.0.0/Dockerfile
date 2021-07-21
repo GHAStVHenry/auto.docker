@@ -6,3 +6,4 @@ RUN git clone https://github.com/GHAStVHenry/single-cell-curation.git && \
     git checkout GHH && \
     make install &&\
     cp ./cellxgene_schema_cli/cellxgene_schema/hgnc_complete_set.txt.gz /usr/local/lib/python3.8/dist-packages/cellxgene_schema/hgnc_complete_set.txt.gz
+    
