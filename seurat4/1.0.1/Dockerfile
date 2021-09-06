@@ -6,3 +6,4 @@ RUN apt-get install -y libhdf5-dev && \
   conda install anndata==0.6.19 scipy==1.6.3 -c bioconda && \
   R -e "BiocManager::install(c(\"LoomExperiment\", \"SingleCellExperiment\"))" && \
   R -e "devtools::install_github(\"cellgeni/sceasy\")"
+  
